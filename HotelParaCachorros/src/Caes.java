@@ -34,10 +34,10 @@ public class Caes implements Cachorros {
 
     @Override
     public String toString() {
-        return "Raças{" +
+        return "{" +
                 "nome='" + nome + '\'' +
                 ", cor='" + cor + '\'' +
-                ", latir='" + latido + '\'' +
+                ", latido='" + latido + '\'' +
                 ", rabo=" + rabo +
                 '}';
     }
