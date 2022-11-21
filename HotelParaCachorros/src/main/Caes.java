@@ -1,14 +1,16 @@
+package main;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Caes implements Cachorros {
+public class Caes implements Cachorro {
 
-    public String nome;
-    public String cor;
-    public String latido;
-    public String rabo;
+    private String nome;
+    private String cor;
+    private String latido;
+    private String rabo;
 
     public Caes(String nome, String cor, String latido, Boolean rabo) {
         this.nome = nome;
