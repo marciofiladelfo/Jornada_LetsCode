@@ -36,4 +36,13 @@ public class Musicas extends Produtos{
     public void setSelo(String selo) {
         this.selo = selo;
     }
+
+    @Override
+    public String toString() {
+        return "Musicas=" +  super.toString() +
+                "genero='" + genero + '\'' +
+                ", musico='" + musico + '\'' +
+                ", selo='" + selo + '\'' +
+                "} ";
+    }
 }

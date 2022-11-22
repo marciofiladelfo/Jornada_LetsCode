@@ -46,4 +46,14 @@ public class Fimes extends Produtos{
     public void setProdutor(String produtor) {
         this.produtor = produtor;
     }
+
+    @Override
+    public String toString() {
+        return "Fimes=" + super.toString() +
+                "genero='" + genero + '\'' +
+                ", diretor='" + diretor + '\'' +
+                ", estudio='" + estudio + '\'' +
+                ", produtor='" + produtor + '\'' +
+                "} ";
+    }
 }

@@ -16,4 +16,11 @@ public class Brinquedos extends Produtos{
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+    @Override
+    public String toString() {
+        return "Brinquedos=" + super.toString() +
+                "tipo='" + tipo + '\'' +
+                "} ";
+    }
 }
