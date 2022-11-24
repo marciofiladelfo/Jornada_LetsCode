@@ -2,9 +2,12 @@ package main;
 
 public class Caixa {
 
-    private Double valorTotal;
+    private static Double valorTotal = 0d;
 
-    public Double getValorTotal() {
+    public static Double getValorTotal() {
         return valorTotal;
+    }
+    public static void somaCarrinho(Double valorCompra){
+        valorTotal += valorCompra;
     }
 }

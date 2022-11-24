@@ -6,8 +6,9 @@ public class Livros extends Produtos implements Comparable<Produtos>{
     private String escritor;
     private String editora;
 
-    public Livros(Integer id, String nome, Double preco, String genero, String escritor, String editora) {
-        super(id, nome, preco);
+    public Livros(Integer id, String nome, Double preco, String genero, String escritor,
+                  String editora, Boolean publicoAdulto) {
+        super(id, nome, preco, publicoAdulto);
         this.genero = genero;
         this.escritor = escritor;
         this.editora = editora;

@@ -5,10 +5,25 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Labrador extends Caes{
+public class Labrador extends Cachorro implements Comparable<Cachorro>{
     private int idade;
-    public Labrador(String nome, String cor, Boolean rabo, int idade) {
-        super(nome, cor, "RoufRouf", rabo);
+
+    public Labrador(int idade) {
         this.idade = idade;
+    }
+
+    @Override
+    public String latir() {
+        return "RoufRouf";
+    }
+
+    @Override
+    public String getNome() {
+        return null;
+    }
+
+    @Override
+    public int compareTo(Cachorro o) {
+        return this.getNome().toLowerCase().compareTo(o.getNome().toLowerCase());
     }
 }

@@ -18,9 +18,9 @@ public class Hotel {
 
     public static void main(String[] args) {
 
-        listCaes.add(new ViraLatas("Caramelo", "Caramelo", false));
-        listCaes.add(new Labrador("Bidu", "Marron", true, 10));
-        listCaes.add(new Pincher("Ragnar","Preto", true));
+        listCaes.add(new ViraLatas("Caramelo", "Caramelo"));
+        listCaes.add(new Labrador(10));
+        listCaes.add(new Pincher("Ragnar","Preto"));
 
 //        Collections.sort(hotel.listCaes, (a,b) -> a.getNome().compareTo(b.getNome()));
         Collections.sort(listCaes);

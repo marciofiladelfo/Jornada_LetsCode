@@ -6,8 +6,9 @@ public class Jogos extends Produtos{
     private String distribuidora;
     private String estudio;
 
-    public Jogos(Integer id, String nome, Double preco, String genero, String distribuidora, String estudio) {
-        super(id, nome, preco);
+    public Jogos(Integer id, String nome, Double preco, String genero, String distribuidora,
+                 String estudio, Boolean publicoAdulto) {
+        super(id, nome, preco, publicoAdulto);
         this.genero = genero;
         this.distribuidora = distribuidora;
         this.estudio = estudio;

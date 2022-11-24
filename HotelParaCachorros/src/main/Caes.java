@@ -5,18 +5,16 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Caes implements Cachorro {
+public class Caes extends Cachorro {
 
     private String nome;
     private String cor;
     private String latido;
     private String rabo;
 
-    public Caes(String nome, String cor, String latido, Boolean rabo) {
+    public Caes(String nome, String cor) {
         this.nome = nome;
         this.cor = cor;
-        this.latido = latido;
-        this.rabo = this.balancaORabo(rabo);
     }
 
     @Override
@@ -25,12 +23,7 @@ public class Caes implements Cachorro {
     }
 
     @Override
-    public String balancaORabo(Boolean rabo) {
-        return rabo ? "Balançando" : "Parado";
-    }
-
-    @Override
-    public int compareTo(Caes caes) {
+    public int compareTo(Cachorro caes) {
         return this.nome.compareTo(caes.getNome());
     }
 

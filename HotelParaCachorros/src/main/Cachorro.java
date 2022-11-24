@@ -1,7 +1,8 @@
 package main;
 
-public interface Cachorro extends Comparable<Caes> {
+import main.administracao.Hospede;
 
-    String latir();
-    String balancaORabo(Boolean rabo);
+public abstract class Cachorro extends Hospede implements Comparable<Cachorro> {
+    public abstract String latir();
+    public abstract String getNome();
 }

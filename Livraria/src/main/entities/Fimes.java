@@ -7,8 +7,9 @@ public class Fimes extends Produtos{
     private String estudio;
     private String produtor;
 
-    public Fimes(Integer id, String nome, Double preco, String genero, String diretor, String estudio, String produtor) {
-        super(id, nome, preco);
+    public Fimes(Integer id, String nome, Double preco, String genero, String diretor,
+                 String estudio, String produtor, Boolean publicoAdulto) {
+        super(id, nome, preco, publicoAdulto);
         this.genero = genero;
         this.diretor = diretor;
         this.estudio = estudio;

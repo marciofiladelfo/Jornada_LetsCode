@@ -6,8 +6,8 @@ public class Musicas extends Produtos{
     private String musico;
     private String selo;
 
-    public Musicas(Integer id, String nome, Double preco, String genero, String musico, String selo) {
-        super(id, nome, preco);
+    public Musicas(Integer id, String nome, Double preco, String genero, String musico, String selo, Boolean publicoAdulto) {
+        super(id, nome, preco, publicoAdulto);
         this.genero = genero;
         this.musico = musico;
         this.selo = selo;

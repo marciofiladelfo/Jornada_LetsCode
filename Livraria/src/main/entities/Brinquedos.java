@@ -4,8 +4,8 @@ public class Brinquedos extends Produtos{
 
     private String tipo;
 
-    public Brinquedos(Integer id, String nome, Double preco, String tipo) {
-        super(id, nome, preco);
+    public Brinquedos(Integer id, String nome, Double preco, String tipo, Boolean publicoAdulto) {
+        super(id, nome, preco, publicoAdulto);
         this.tipo = tipo;
     }
 
