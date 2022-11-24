@@ -1,13 +1,13 @@
 package main.entities;
 
-public class Jogos extends Produtos{
+public class Jogos extends Produtos {
 
     private String genero;
     private String distribuidora;
     private String estudio;
 
-    public Jogos(Integer id, String nome, Double preco, String genero, String distribuidora,
-                 String estudio, Boolean publicoAdulto) {
+    public Jogos(Integer id, String nome, double preco, String genero, String distribuidora,
+                 String estudio, boolean publicoAdulto) {
         super(id, nome, preco, publicoAdulto);
         this.genero = genero;
         this.distribuidora = distribuidora;
@@ -40,10 +40,10 @@ public class Jogos extends Produtos{
 
     @Override
     public String toString() {
-        return "Jogos=" + super.toString() +
+        return "Jogo=" + super.toString() +
                 "genero='" + genero + '\'' +
                 ", distribuidora='" + distribuidora + '\'' +
                 ", estudio='" + estudio + '\'' +
-                "} ";
+                "} \n";
     }
 }

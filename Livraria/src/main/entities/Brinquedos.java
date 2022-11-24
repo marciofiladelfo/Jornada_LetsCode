@@ -4,7 +4,7 @@ public class Brinquedos extends Produtos{
 
     private String tipo;
 
-    public Brinquedos(Integer id, String nome, Double preco, String tipo, Boolean publicoAdulto) {
+    public Brinquedos(Integer id, String nome, double preco, String tipo, boolean publicoAdulto) {
         super(id, nome, preco, publicoAdulto);
         this.tipo = tipo;
     }
@@ -19,8 +19,8 @@ public class Brinquedos extends Produtos{
 
     @Override
     public String toString() {
-        return "Brinquedos=" + super.toString() +
+        return "Brinquedo=" + super.toString() +
                 "tipo='" + tipo + '\'' +
-                "} ";
+                "} \n";
     }
 }

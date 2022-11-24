@@ -1,13 +1,13 @@
 package main.entities;
 
-public class Livros extends Produtos implements Comparable<Produtos>{
+public class Livros extends Produtos implements Comparable<Produtos> {
 
     private String genero;
     private String escritor;
     private String editora;
 
-    public Livros(Integer id, String nome, Double preco, String genero, String escritor,
-                  String editora, Boolean publicoAdulto) {
+    public Livros(Integer id, String nome, double preco, String genero, String escritor,
+                  String editora, boolean publicoAdulto) {
         super(id, nome, preco, publicoAdulto);
         this.genero = genero;
         this.escritor = escritor;
@@ -40,12 +40,13 @@ public class Livros extends Produtos implements Comparable<Produtos>{
 
     @Override
     public String toString() {
-        return  "Livros=" + super.toString() +
+        return "Livro=" + super.toString() +
                 "genero='" + genero + '\'' +
                 ", escritor='" + escritor + '\'' +
                 ", editora='" + editora + '\'' +
-                "} ";
+                "} \n";
     }
+
     @Override
     public int compareTo(Produtos o) {
         return this.toString().compareTo("Livros=");

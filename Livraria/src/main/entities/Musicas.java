@@ -1,12 +1,12 @@
 package main.entities;
 
-public class Musicas extends Produtos{
+public class Musicas extends Produtos {
 
     private String genero;
     private String musico;
     private String selo;
 
-    public Musicas(Integer id, String nome, Double preco, String genero, String musico, String selo, Boolean publicoAdulto) {
+    public Musicas(Integer id, String nome, double preco, String genero, String musico, String selo, boolean publicoAdulto) {
         super(id, nome, preco, publicoAdulto);
         this.genero = genero;
         this.musico = musico;
@@ -39,10 +39,10 @@ public class Musicas extends Produtos{
 
     @Override
     public String toString() {
-        return "Musicas=" +  super.toString() +
+        return "Musica=" + super.toString() +
                 "genero='" + genero + '\'' +
                 ", musico='" + musico + '\'' +
                 ", selo='" + selo + '\'' +
-                "} ";
+                "} \n";
     }
 }

@@ -3,10 +3,10 @@ package main.entities;
 public class Produtos {
     private Integer id;
     private String nome;
-    private Double preco;
-    private Boolean publicoAdulto;
+    private double preco;
+    private boolean publicoAdulto;
 
-    public Produtos(Integer id, String nome, Double preco, Boolean publicoAdulto) {
+    public Produtos(Integer id, String nome, double preco, boolean publicoAdulto) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
@@ -29,19 +29,19 @@ public class Produtos {
         this.nome = nome;
     }
 
-    public Double getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(Double preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 
-    public Boolean getPublicoAdulto() {
+    public boolean getPublicoAdulto() {
         return publicoAdulto;
     }
 
-    public void setPublicoAdulto(Boolean publicoAdulto) {
+    public void setPublicoAdulto(boolean publicoAdulto) {
         this.publicoAdulto = publicoAdulto;
     }
 

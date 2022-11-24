@@ -1,14 +1,14 @@
 package main.entities;
 
-public class Fimes extends Produtos{
+public class Filmes extends Produtos{
 
     private String genero;
     private String diretor;
     private String estudio;
     private String produtor;
 
-    public Fimes(Integer id, String nome, Double preco, String genero, String diretor,
-                 String estudio, String produtor, Boolean publicoAdulto) {
+    public Filmes(Integer id, String nome, double preco, String genero, String diretor,
+                  String estudio, String produtor, boolean publicoAdulto) {
         super(id, nome, preco, publicoAdulto);
         this.genero = genero;
         this.diretor = diretor;
@@ -50,11 +50,11 @@ public class Fimes extends Produtos{
 
     @Override
     public String toString() {
-        return "Fimes=" + super.toString() +
+        return "Filme=" + super.toString() +
                 "genero='" + genero + '\'' +
                 ", diretor='" + diretor + '\'' +
                 ", estudio='" + estudio + '\'' +
                 ", produtor='" + produtor + '\'' +
-                "} ";
+                "} \n";
     }
 }

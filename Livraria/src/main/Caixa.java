@@ -1,13 +1,16 @@
 package main;
 
+import main.utils.Conversor;
+
 public class Caixa {
 
-    private static Double valorTotal = 0d;
+    private static double valorTotal = 0d;
 
-    public static Double getValorTotal() {
-        return valorTotal;
+    public static double getValorTotal() {
+        return Conversor.converterDoubleDoisDecimais(valorTotal);
     }
-    public static void somaCarrinho(Double valorCompra){
+
+    public static void somaCarrinho(double valorCompra) {
         valorTotal += valorCompra;
     }
 }
