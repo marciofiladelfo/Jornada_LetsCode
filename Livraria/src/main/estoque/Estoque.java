@@ -1,9 +1,11 @@
 package main.estoque;
 
+import main.entities.Livros;
 import main.entities.Produtos;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class Estoque<T extends Produtos> {

@@ -1,123 +1,98 @@
 package main.estoque;
 
-import main.entities.Produtos;
+import main.entities.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import static main.estoque.TiposProdutos.*;
+import java.util.stream.Collectors;
 
 public class ControleEstoque implements TipoProdutosEstoque {
     private final AtomicInteger count = new AtomicInteger();
+    private List<Produtos> listTiposEspecificos = new ArrayList<>();
 
     @Override
     public void somaLivros(List<Produtos> list) {
-        list.forEach(x -> {
-            if (x.toString().contains(LIVROS.getDescricao())) {
-                count.getAndIncrement();
-            }
-        });
+        list.stream().filter(p -> p instanceof Livros)
+                .forEach(x -> count.getAndIncrement());
         System.out.println("Total de Livros: " + count);
-        count.set(0);
+        clearVariables();
     }
 
     @Override
     public void somaBrinquedos(List<Produtos> list) {
-        list.forEach(x -> {
-            if (x.toString().contains(BRINQUEDOS.getDescricao())) {
-                count.getAndIncrement();
-            }
-        });
+        list.stream().filter(p -> p instanceof Brinquedos)
+                .forEach(x -> count.getAndIncrement());
         System.out.println("Total de Brinquedos: " + count);
-        count.set(0);
+        clearVariables();
     }
 
     @Override
     public void somaFilmes(List<Produtos> list) {
-        list.forEach(x -> {
-            if (x.toString().contains(FILMES.getDescricao())) {
-                count.getAndIncrement();
-            }
-        });
+        list.stream().filter(p -> p instanceof Filmes)
+                .forEach(x -> count.getAndIncrement());
         System.out.println("Total de Filmes: " + count);
-        count.set(0);
+        clearVariables();
     }
 
     @Override
     public void somaJogos(List<Produtos> list) {
-        list.forEach(x -> {
-            if (x.toString().contains(JOGOS.getDescricao())) {
-                count.getAndIncrement();
-            }
-        });
+        list.stream().filter(p -> p instanceof Jogos)
+                .forEach(x -> count.getAndIncrement());
         System.out.println("Total de Jogos: " + count);
-        count.set(0);
+        clearVariables();
     }
 
     @Override
     public void somaMusicas(List<Produtos> list) {
-        list.forEach(x -> {
-            if (x.toString().contains(MUSICAS.getDescricao())) {
-                count.getAndIncrement();
-            }
-        });
+        list.stream().filter(p -> p instanceof Musicas)
+                .forEach(x -> count.getAndIncrement());
         System.out.println("Total de Musicas: " + count);
-        count.set(0);
+        clearVariables();
     }
 
     @Override
     public void buscarLivros(List<Produtos> list) {
-        List<Produtos> listTiposEspecificos = new ArrayList<>();
-        list.forEach(x -> {
-            if (x.toString().contains(LIVROS.getDescricao())) {
-                listTiposEspecificos.add(x);
-            }
-        });
+        listTiposEspecificos = list.stream()
+                .filter(p -> p instanceof Livros).collect(Collectors.toList());
         System.out.println("Estoque de livros: " + listTiposEspecificos);
+        clearVariables();
     }
 
     @Override
     public void buscarBrinquedos(List<Produtos> list) {
-        List<Produtos> listTiposEspecificos = new ArrayList<>();
-        list.forEach(x -> {
-            if (x.toString().contains(BRINQUEDOS.getDescricao())) {
-                listTiposEspecificos.add(x);
-            }
-        });
+        listTiposEspecificos = list.stream()
+                .filter(p -> p instanceof Brinquedos).collect(Collectors.toList());
         System.out.println("Estoque de brinquedos: " + listTiposEspecificos);
+        clearVariables();
     }
 
     @Override
     public void buscarFilmes(List<Produtos> list) {
-        List<Produtos> listTiposEspecificos = new ArrayList<>();
-        list.forEach(x -> {
-            if (x.toString().contains(FILMES.getDescricao())) {
-                listTiposEspecificos.add(x);
-            }
-        });
+        listTiposEspecificos = list.stream()
+                .filter(p -> p instanceof Filmes).collect(Collectors.toList());
         System.out.println("Estoque de filmes: " + listTiposEspecificos);
+        clearVariables();
     }
 
     @Override
     public void buscarJogos(List<Produtos> list) {
-        List<Produtos> listTiposEspecificos = new ArrayList<>();
-        list.forEach(x -> {
-            if (x.toString().contains(JOGOS.getDescricao())) {
-                listTiposEspecificos.add(x);
-            }
-        });
+        listTiposEspecificos = list.stream()
+                .filter(p -> p instanceof Jogos).collect(Collectors.toList());
         System.out.println("Estoque de jogos: " + listTiposEspecificos);
+        clearVariables();
     }
 
     @Override
     public void buscarMusicas(List<Produtos> list) {
-        List<Produtos> listTiposEspecificos = new ArrayList<>();
-        list.forEach(x -> {
-            if (x.toString().contains(MUSICAS.getDescricao())) {
-                listTiposEspecificos.add(x);
-            }
-        });
+        listTiposEspecificos = list.stream()
+                .filter(p -> p instanceof Musicas).collect(Collectors.toList());
         System.out.println("Estoque de musicas: " + listTiposEspecificos);
+        clearVariables();
+    }
+
+    private void clearVariables(){
+        count.set(0);
+        listTiposEspecificos = new ArrayList<>();
     }
 }
