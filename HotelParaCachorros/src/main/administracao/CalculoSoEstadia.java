@@ -1,9 +1,9 @@
 package main.administracao;
 
-public class CalculoSoEstadia implements Calculo {
+public class CalculoSoEstadia extends Calculo {
 
-    public Double getValorFinal(Checkout checkOut){
-        Double somaTotal = checkOut.getEstadia();
+    public double getValorFinal(Checkout checkOut){
+        double somaTotal = checkOut.getEstadia();
         RegistroContabil.addRegistroContabil(checkOut.getCachorro(), somaTotal);
         return somaTotal;
     }

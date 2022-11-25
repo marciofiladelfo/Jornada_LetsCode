@@ -1,20 +1,15 @@
 package main;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class Caes extends Cachorro {
 
     private String nome;
     private String cor;
     private String latido;
-    private String rabo;
 
-    public Caes(String nome, String cor) {
+    public Caes(String nome, String cor, String latido) {
         this.nome = nome;
         this.cor = cor;
+        this.latido = latido;
     }
 
     @Override
@@ -23,8 +18,9 @@ public class Caes extends Cachorro {
     }
 
     @Override
-    public int compareTo(Cachorro caes) {
-        return this.nome.compareTo(caes.getNome());
+    public int compareTo(Cachorro cachorro){
+        String nome = this.getNome();
+        return nome.compareToIgnoreCase(cachorro.getNome());
     }
 
     @Override
@@ -32,8 +28,32 @@ public class Caes extends Cachorro {
         return "{" +
                 "nome='" + nome + '\'' +
                 ", cor='" + cor + '\'' +
-                ", latido='" + latido + '\'' +
-                ", rabo=" + rabo +
+                ", latido='" + latido +
                 '}';
+    }
+
+    @Override
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getLatido() {
+        return latido;
+    }
+
+    public void setLatido(String latido) {
+        this.latido = latido;
     }
 }

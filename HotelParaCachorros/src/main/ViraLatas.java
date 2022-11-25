@@ -1,22 +1,18 @@
 package main;
 
-public class ViraLatas extends Cachorro{
+public class ViraLatas extends Caes implements Comparable<Cachorro> {
+
     public ViraLatas(String nome, String cor) {
-        (nome, cor, "Aimauaimauaim");
+        super(nome, cor, "awrawrawrawrawr");
+
     }
 
-    @Override
     public String latir() {
-        return null;
+        return "awrawrawrawrawr";
     }
 
     @Override
-    public String getNome() {
-        return null;
-    }
-
-    @Override
-    public int compareTo(Cachorro o) {
-        return 0;
+    public int compareTo(Cachorro cachorro) {
+        return this.getNome().toLowerCase().compareTo(cachorro.getNome().toLowerCase());
     }
 }
