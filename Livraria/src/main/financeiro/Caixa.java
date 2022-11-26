@@ -1,4 +1,4 @@
-package main;
+package main.financeiro;
 
 import main.utils.Conversor;
 

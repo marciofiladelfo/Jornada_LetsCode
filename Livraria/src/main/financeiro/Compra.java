@@ -1,4 +1,4 @@
-package main;
+package main.financeiro;
 
 import main.entities.Produtos;
 import main.estoque.Estoque;
@@ -16,7 +16,9 @@ public class Compra {
     public List<Produtos> produtosCompra = new ArrayList<>();
 
     public void efetuarCompra(List<Produtos> carrinho, CadastroComprador cadastroComprador) {
+        /* Utilizado variável para interromper a compra quando menor comprar produto impróprio à idade */
         AtomicReference<Boolean> ongoing = new AtomicReference<>(true);
+
         carrinho.stream().takeWhile(item -> ongoing.get()).forEach(item -> {
             if (cadastroComprador.calcularIdade() < 18) {
                 if (!item.getPublicoAdulto()) {

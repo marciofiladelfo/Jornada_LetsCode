@@ -1,8 +1,11 @@
 package main;
 
 import main.entities.*;
-import main.estoque.ControleEstoque;
 import main.estoque.Estoque;
+import main.estoque.ControleEstoque;
+import main.financeiro.CadastroComprador;
+import main.financeiro.Caixa;
+import main.financeiro.Compra;
 import main.utils.Conversor;
 
 public class Livraria {
@@ -27,20 +30,19 @@ public class Livraria {
 
         /* Testes de controle de estoque */
         System.out.println("*********************** Controle de estoque *****************************");
-        ControleEstoque controleEstoque = new ControleEstoque();
-        controleEstoque.somaLivros(Estoque.estoque);
-        controleEstoque.somaBrinquedos(Estoque.estoque);
-        controleEstoque.somaFilmes(Estoque.estoque);
-        controleEstoque.somaJogos(Estoque.estoque);
-        controleEstoque.somaMusicas(Estoque.estoque);
+        ControleEstoque.somaLivros(Estoque.estoque);
+        ControleEstoque.somaBrinquedos(Estoque.estoque);
+        ControleEstoque.somaFilmes(Estoque.estoque);
+        ControleEstoque.somaJogos(Estoque.estoque);
+        ControleEstoque.somaMusicas(Estoque.estoque);
 
         /* Exibe Estoque por categoria */
         System.out.println("*********************** Exibe estoque por categoria *****************************");
-        controleEstoque.buscarLivros(Estoque.estoque);
-        controleEstoque.buscarBrinquedos(Estoque.estoque);
-        controleEstoque.buscarFilmes(Estoque.estoque);
-        controleEstoque.buscarJogos(Estoque.estoque);
-        controleEstoque.buscarMusicas(Estoque.estoque);
+        Estoque.buscarLivros(Estoque.estoque);
+        Estoque.buscarBrinquedos(Estoque.estoque);
+        Estoque.buscarFilmes(Estoque.estoque);
+        Estoque.buscarJogos(Estoque.estoque);
+        Estoque.buscarMusicas(Estoque.estoque);
 
         /* Valor do Caixa Inicial */
         System.out.println("*********************** Valor do Caixa Inicial *****************************");
@@ -87,20 +89,19 @@ public class Livraria {
 
         /* Exibe Estoque após compras */
         System.out.println("*********************** Exibe Quantidade após compras *****************************");
-        ControleEstoque controleEstoque2 = new ControleEstoque();
-        controleEstoque2.somaLivros(Estoque.estoque);
-        controleEstoque2.somaBrinquedos(Estoque.estoque);
-        controleEstoque2.somaFilmes(Estoque.estoque);
-        controleEstoque2.somaJogos(Estoque.estoque);
-        controleEstoque2.somaMusicas(Estoque.estoque);
+        ControleEstoque.somaLivros(Estoque.estoque);
+        ControleEstoque.somaBrinquedos(Estoque.estoque);
+        ControleEstoque.somaFilmes(Estoque.estoque);
+        ControleEstoque.somaJogos(Estoque.estoque);
+        ControleEstoque.somaMusicas(Estoque.estoque);
 
         /* Exibe Estoque após compras */
         System.out.println("*********************** Exibe por categoria após compras *****************************");
-        controleEstoque2.buscarLivros(Estoque.estoque);
-        controleEstoque2.buscarBrinquedos(Estoque.estoque);
-        controleEstoque2.buscarFilmes(Estoque.estoque);
-        controleEstoque2.buscarJogos(Estoque.estoque);
-        controleEstoque2.buscarMusicas(Estoque.estoque);
+        Estoque.buscarLivros(Estoque.estoque);
+        Estoque.buscarBrinquedos(Estoque.estoque);
+        Estoque.buscarFilmes(Estoque.estoque);
+        Estoque.buscarJogos(Estoque.estoque);
+        Estoque.buscarMusicas(Estoque.estoque);
 
         System.out.println("*********************** Listar estoque *****************************");
         Estoque.listar();
