@@ -1,6 +1,7 @@
 package main;
 
 import main.entities.*;
+import main.estoque.BuscarPorTipoProduto;
 import main.estoque.Estoque;
 import main.estoque.ControleEstoque;
 import main.financeiro.CadastroComprador;
@@ -30,19 +31,32 @@ public class Livraria {
 
         /* Testes de controle de estoque */
         System.out.println("*********************** Controle de estoque *****************************");
-        ControleEstoque.somaLivros(Estoque.estoque);
-        ControleEstoque.somaBrinquedos(Estoque.estoque);
-        ControleEstoque.somaFilmes(Estoque.estoque);
-        ControleEstoque.somaJogos(Estoque.estoque);
-        ControleEstoque.somaMusicas(Estoque.estoque);
+        var controles1 = ControleEstoque.totalProdutosPorTipoNoEstoque(Estoque.estoque, "Livros");
+        var controles2 = ControleEstoque.totalProdutosPorTipoNoEstoque(Estoque.estoque, "Brinquedos");
+        var controles3 = ControleEstoque.totalProdutosPorTipoNoEstoque(Estoque.estoque, "Filmes");
+        var controles4 = ControleEstoque.totalProdutosPorTipoNoEstoque(Estoque.estoque, "Jogos");
+        var controles5 = ControleEstoque.totalProdutosPorTipoNoEstoque(Estoque.estoque, "Musicas");
+
+        System.out.println(controles1);
+        System.out.println(controles2);
+        System.out.println(controles3);
+        System.out.println(controles4);
+        System.out.println(controles5);
+
 
         /* Exibe Estoque por categoria */
         System.out.println("*********************** Exibe estoque por categoria *****************************");
-        Estoque.buscarLivros(Estoque.estoque);
-        Estoque.buscarBrinquedos(Estoque.estoque);
-        Estoque.buscarFilmes(Estoque.estoque);
-        Estoque.buscarJogos(Estoque.estoque);
-        Estoque.buscarMusicas(Estoque.estoque);
+        var filtros1 = BuscarPorTipoProduto.filtraTipoProduto(Estoque.estoque, "Livros");
+        var filtros2 = BuscarPorTipoProduto.filtraTipoProduto(Estoque.estoque, "Brinquedos");
+        var filtros3 = BuscarPorTipoProduto.filtraTipoProduto(Estoque.estoque, "Filmes");
+        var filtros4 = BuscarPorTipoProduto.filtraTipoProduto(Estoque.estoque, "Jogos");
+        var filtros5 = BuscarPorTipoProduto.filtraTipoProduto(Estoque.estoque, "Musicas");
+
+        System.out.println(filtros1);
+        System.out.println(filtros2);
+        System.out.println(filtros3);
+        System.out.println(filtros4);
+        System.out.println(filtros5);
 
         /* Valor do Caixa Inicial */
         System.out.println("*********************** Valor do Caixa Inicial *****************************");
@@ -64,7 +78,7 @@ public class Livraria {
         /* Exibe valor da compra e caixa */
         System.out.println("*********************** Exibe valor da compra e caixa *****************************");
         System.out.println(compra.getValorCompra());
-        System.out.println(Conversor.converterDoubleDoisDecimais(Caixa.getValorTotal()));
+        System.out.println(Caixa.getValorTotal());
 
         /* Cadastro de compras */
         Compra compra2 = new Compra();
@@ -89,19 +103,31 @@ public class Livraria {
 
         /* Exibe Estoque após compras */
         System.out.println("*********************** Exibe Quantidade após compras *****************************");
-        ControleEstoque.somaLivros(Estoque.estoque);
-        ControleEstoque.somaBrinquedos(Estoque.estoque);
-        ControleEstoque.somaFilmes(Estoque.estoque);
-        ControleEstoque.somaJogos(Estoque.estoque);
-        ControleEstoque.somaMusicas(Estoque.estoque);
+        var controles6 = ControleEstoque.totalProdutosPorTipoNoEstoque(Estoque.estoque, "Livros");
+        var controles7 = ControleEstoque.totalProdutosPorTipoNoEstoque(Estoque.estoque, "Brinquedos");
+        var controles8 = ControleEstoque.totalProdutosPorTipoNoEstoque(Estoque.estoque, "Filmes");
+        var controles9 = ControleEstoque.totalProdutosPorTipoNoEstoque(Estoque.estoque, "Jogos");
+        var controles10 = ControleEstoque.totalProdutosPorTipoNoEstoque(Estoque.estoque, "Musicas");
+
+        System.out.println(controles6);
+        System.out.println(controles7);
+        System.out.println(controles8);
+        System.out.println(controles9);
+        System.out.println(controles10);
 
         /* Exibe Estoque após compras */
         System.out.println("*********************** Exibe por categoria após compras *****************************");
-        Estoque.buscarLivros(Estoque.estoque);
-        Estoque.buscarBrinquedos(Estoque.estoque);
-        Estoque.buscarFilmes(Estoque.estoque);
-        Estoque.buscarJogos(Estoque.estoque);
-        Estoque.buscarMusicas(Estoque.estoque);
+        var filtros6 = BuscarPorTipoProduto.filtraTipoProduto(Estoque.estoque, "Livros");
+        var filtros7 = BuscarPorTipoProduto.filtraTipoProduto(Estoque.estoque, "Brinquedos");
+        var filtros8 = BuscarPorTipoProduto.filtraTipoProduto(Estoque.estoque, "Filmes");
+        var filtros9 = BuscarPorTipoProduto.filtraTipoProduto(Estoque.estoque, "Jogos");
+        var filtros10 = BuscarPorTipoProduto.filtraTipoProduto(Estoque.estoque, "Musicas");
+
+        System.out.println(filtros6);
+        System.out.println(filtros7);
+        System.out.println(filtros8);
+        System.out.println(filtros9);
+        System.out.println(filtros10);
 
         System.out.println("*********************** Listar estoque *****************************");
         Estoque.listar();

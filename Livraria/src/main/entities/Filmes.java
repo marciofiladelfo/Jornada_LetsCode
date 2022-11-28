@@ -9,7 +9,7 @@ public class Filmes extends Produtos{
 
     public Filmes(Integer id, String nome, double preco, String genero, String diretor,
                   String estudio, String produtor, boolean publicoAdulto) {
-        super(id, nome, preco, publicoAdulto);
+        super(id, nome, preco, publicoAdulto, "Filmes");
         this.genero = genero;
         this.diretor = diretor;
         this.estudio = estudio;

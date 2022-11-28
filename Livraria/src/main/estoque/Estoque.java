@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Estoque<T extends Produtos> extends BuscarPorTipoProduto {
+public class Estoque<T extends Produtos> implements BuscarPorTipoProduto, ControleEstoque {
 
     public static List<Produtos> estoque = new ArrayList<>();
 
@@ -29,7 +29,7 @@ public class Estoque<T extends Produtos> extends BuscarPorTipoProduto {
     public static void apagar(Produtos t) {
         if (!vetorVazio()) {
             for (int i = 0; i < estoque.size(); i++) {
-                if (estoque.get(i).getId().equals(t.getId())) {
+                if (estoque.get(i).equals(t)) {
                     estoque.remove(t);
                 }
             }
@@ -45,7 +45,7 @@ public class Estoque<T extends Produtos> extends BuscarPorTipoProduto {
     public static void editar(Produtos t) {
         if (!vetorVazio()) {
             for (int i = 0; i < estoque.size(); i++) {
-                if (estoque.get(i).getId().equals(t.getId())) {
+                if (estoque.get(i).equals(t)) {
                     estoque.set(i, t);
                 }
             }

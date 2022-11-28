@@ -8,7 +8,7 @@ public class Livros extends Produtos implements Comparable<Produtos> {
 
     public Livros(Integer id, String nome, double preco, String genero, String escritor,
                   String editora, boolean publicoAdulto) {
-        super(id, nome, preco, publicoAdulto);
+        super(id, nome, preco, publicoAdulto, "Livros");
         this.genero = genero;
         this.escritor = escritor;
         this.editora = editora;

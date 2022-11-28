@@ -8,7 +8,7 @@ public class Jogos extends Produtos {
 
     public Jogos(Integer id, String nome, double preco, String genero, String distribuidora,
                  String estudio, boolean publicoAdulto) {
-        super(id, nome, preco, publicoAdulto);
+        super(id, nome, preco, publicoAdulto, "Jogos");
         this.genero = genero;
         this.distribuidora = distribuidora;
         this.estudio = estudio;

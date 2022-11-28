@@ -5,12 +5,14 @@ public class Produtos {
     private String nome;
     private double preco;
     private boolean publicoAdulto;
+    public String tipoProduto;
 
-    public Produtos(Integer id, String nome, double preco, boolean publicoAdulto) {
+    public Produtos(Integer id, String nome, double preco, boolean publicoAdulto, String tipoProduto) {
         this.id = id;
         this.nome = nome;
         this.preco = preco;
         this.publicoAdulto = publicoAdulto;
+        this.tipoProduto = tipoProduto;
     }
 
     public Integer getId() {
@@ -53,5 +55,20 @@ public class Produtos {
                 ", Público Adulto?='" + publicoAdulto + '\'' +
                 ", preco=" + preco + '\'' +
                 ' ';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o instanceof Produtos){
+            if(this.id.equals(((Produtos) o).id)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.id.hashCode();
     }
 }
