@@ -64,7 +64,7 @@ public class Livraria {
         /* Exibe valor da compra e caixa */
         System.out.println("*********************** Exibe valor da compra e caixa *****************************");
         System.out.println(compra.getValorCompra());
-        System.out.println(Conversor.converterDoubleDoisDecimais(Caixa.getValorTotal()));
+        System.out.println(Caixa.getValorTotal());
 
         /* Cadastro de compras */
         Compra compra2 = new Compra();
